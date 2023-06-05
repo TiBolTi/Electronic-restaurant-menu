@@ -1,0 +1,330 @@
+/*Таблицы*/
+
+body {
+    background-color: #f3f5f4 !important;
+}
+
+tbody  {
+    vertical-align: middle !important;
+}
+
+.bg-1 {
+    background-image: url('/img/background/bg_1.jpg');
+    background-color: #f3f5f4 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 172%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    min-width: 121vh;
+    top: 0;
+}
+.bg-2 {
+    background-image: url('/img/background/bg_2.jpg');
+    background-color: #f3f5f4 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200%;
+    width: 100%;
+    max-height: 600px;
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    min-width: 121vh;
+}
+.bg-3 {
+    background-image: url('/img/background/bg_3.jpg');
+    background-color: #f3f5f4 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160%;
+    width: 100%;
+    max-height: 670px;
+    min-width: 121vh;
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+}
+
+
+.bg-4 {
+    background-image: url('/img/background/bg_4.jpg');
+    background-color: #f3f5f4 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200%;
+    max-height: 600px;
+    width: 100%;
+    min-width: 121vh;
+    z-index: -2;
+    position: absolute;
+    left: 0px;
+}
+.bg-5 {
+    background-image: url('/img/background/bg_5.jpg');
+    background-color: #f3f5f4 !important;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    height: fit-content;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.h1_title {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 19px;
+    font-weight: 600;
+    color: #838485;
+}
+
+.block_img{
+    width: 450px;
+}
+
+.offcanvas-category {
+    display: none !important;
+}
+
+@media (max-width: 920px) {
+
+    .ms-es-5 {
+        margin-left: 50px;
+    }
+
+
+
+    .container {
+        max-width: 100% !important;
+    }
+
+    .flex-es-wrap {
+        flex-wrap: wrap;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .map {
+        max-width: 400px;
+    }
+    .block_img{
+        width: 300px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .ms-es-5 {
+        margin-left: 50px;
+    }
+    .offcanvas-category {
+        display: block !important;
+    }
+
+
+}
+
+
+table {
+    background: #fffffff7;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,.075)!important;
+}
+
+.table-content {
+    text-align: right;
+    border-width: 0 0 !important;
+    border-right: 1px solid !important;
+    border-color: inherit !important;
+}
+.table-buttons {
+    display: none;
+}
+.table-container:hover .table-buttons{
+    display: revert;
+}
+/*Заголовки в таблицах*/
+.id-column {
+    text-align: center;
+    width: 45px;
+    vertical-align: middle;
+}
+
+.date-column {
+    width: 16%;
+}
+
+.table-sort-btn {
+    width: -webkit-fill-available;
+}
+
+.buttons-column{
+    width: 10%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/*Иконка отсутствии записей*/
+.records-missing-icon {
+    font-size: 85px; margin: 20px; color: silver;
+}
+
+.category-list-button {
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,.075)!important;
+}
+
+
+.category-item-button{
+    /*background: #0000005c !important;*/
+    padding: 13px;
+
+}
+.category-list-button:hover{
+    color: black !important;
+    background: #e5e5e5 !important;
+    font-weight: bold;
+
+    border: 2px solid #59595d !important;
+}
+.category-active {
+    color: black !important;
+    background: #e5e5e5 !important;
+    /*background: orange !important;*/
+    font-weight: bold;
+    border: 2px solid #59595d !important;
+}
+
+.food-item {
+    border-radius: 10px !important;
+}
+
+
+
+.category-card-body {
+    padding: 0rem 0rem !important;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    z-index: 12;
+    position: absolute;
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,.075)!important;
+}
+
+.food-price-tag {
+    border-radius: 8px 0px 8px 0px !important;
+}
+
+.food-vegan-tag {
+    border-radius: 0px 0px 8px 8px !important;
+    margin-right: 7px;
+}
+.food-special-tag {
+    border-radius: 0px 8px 0px 8px !important;
+}
+
+
+.sort-by-tag .form-check-input:focus{
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 10%);
+}
+
+.sort-by-tag .form-check-input:checked {
+    background-color: #0d6efd00;
+    border-color: #ffffff;
+}
+
+.category-card-button {
+    border: none;
+    border-radius: 0px 0px 7px 7px;
+    width: 100%;
+    height: 30%;
+    background: #0000005c !important;
+    padding: 1rem 1rem;
+    color: white;
+
+}
+
+.card:hover .category-card-button {
+    color: black !important;
+    background: #fffffff2 !important;
+    font-weight: bold;
+    border-top: 2px solid #59595d !important;
+}
+
+.card:hover .category-card-body {
+    border: 2px solid #59595d !important;
+}
+
+
+
+
+svg.tea {
+    --secondary: #3f3f41;
+    transform: scale(2);
+}
+
+#teabag {
+    transform-origin: top center;
+    transform: rotate(3deg);
+    animation: swing 2s infinite;
+}
+
+#steamL {
+    stroke-dasharray: 13;
+    stroke-dashoffset: 13;
+    animation: steamLarge 2s infinite;
+}
+
+#steamR {
+    stroke-dasharray: 9;
+    stroke-dashoffset: 9;
+    animation: steamSmall 2s infinite;
+}
+
+@keyframes swing {
+    50% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes steamLarge {
+    0% {
+        stroke-dashoffset: 13;
+        opacity: 0.6;
+    }
+    100% {
+        stroke-dashoffset: 39;
+        opacity: 0;
+    }
+}
+
+@keyframes steamSmall {
+    10% {
+        stroke-dashoffset: 9;
+        opacity: 0.6;
+    }
+    80% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+    }
+}
+
+
+
