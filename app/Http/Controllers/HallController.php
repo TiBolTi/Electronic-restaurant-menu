@@ -8,11 +8,7 @@ use Validator;
 
 class HallController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $paginate = 15; //Количество элементов отображаемых на одной странице
@@ -21,11 +17,7 @@ class HallController extends Controller
         return view('halls.index', compact('halls', 'paginate'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function sort(Request $request)
     {
 
@@ -44,12 +36,6 @@ class HallController extends Controller
         return response()->json(['view' => $view]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
 
@@ -72,8 +58,8 @@ class HallController extends Controller
 
         $record = "<tr class='table-container record' id='record-" . $hall->id . "'>
     <td class='text-center'>" . $records_number . "</td>
-    <td>" . $hall->name . "</td>
-    <td>" . $hall->number_of_tables. "</td>
+  <td><b>" . $hall->name . "</b> зал </td>
+    <td><b>" . $hall->number_of_tables. "</b> столиков</td>
     <td>" . $hall->created_at . "</td>"
             . (auth()->user()->can('manage records') ? "
     <td class='table-content'>
@@ -93,37 +79,9 @@ class HallController extends Controller
     }
 
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Hall  $hall
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Hall $hall)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Hall  $hall
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Hall $hall)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Hall  $hall
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
             'number_of_tables' => 'required|max:255',
@@ -141,8 +99,8 @@ class HallController extends Controller
 
         $record = "<tr class='table-container record' id='record-" . $hall->id . "'>
     <td class='text-center'>" . $records_number . "</td>
-    <td>" . $hall->name . "</td>
-    <td>" . $hall->number_of_tables. "</td>
+    <td><b>" . $hall->name . "</b> зал </td>
+    <td><b>" . $hall->number_of_tables. "</b> столиков</td>
     <td>" . $hall->created_at . "</td>"
             . (auth()->user()->can('manage records') ? "
     <td class='table-content'>
@@ -159,12 +117,6 @@ class HallController extends Controller
         return  response()->json(['record' => $record, 'record_id'=> $records_number, 'success' => true]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Hall  $hall
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Hall $hall)
     {
         $record_counts=  Hall::where('id', '<=', $hall->id)->count();

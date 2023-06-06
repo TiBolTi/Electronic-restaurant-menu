@@ -8,6 +8,10 @@ tbody  {
     vertical-align: middle !important;
 }
 
+.dropdown-item:active {
+    background-color: #212529 !important;
+}
+
 .bg-1 {
     background-image: url('/img/background/bg_1.jpg');
     background-color: #f3f5f4 !important;

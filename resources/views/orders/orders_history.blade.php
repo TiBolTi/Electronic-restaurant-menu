@@ -128,13 +128,16 @@
             <td class="buttons-column" colspan="2">
                 <b>Блюдо</b>
             </td>
-            <td class="buttons-column" colspan="2">
+            <td class="buttons-column" colspan="1">
                 <b>Цена</b>
             </td>
             <td class="buttons-column" colspan="2">
-                <b>Количество</b>
+                <b>Количество порций</b>
             </td>
             <td class="buttons-column" colspan="2">
+                <b>Приготовлено</b>
+            </td>
+            <td class="buttons-column" colspan="1">
                 <b>Сумма</b>
             </td>
             <td class="buttons-column" >
@@ -154,13 +157,18 @@
             <tr class="table-container" id="ordered-food-">
                 <td><img width="150px" src="{{asset('storage/files/' . $food->image)}}" class="rounded" alt="..."></td>
                 <td>{{$food->name}}</td>
-                <td colspan="2" id="food-price">{{$food->price}} сом</td>
+                <td colspan="1" id="food-price">{{$food->price}} сом</td>
                 <td colspan="2">
                     <div class="d-flex flex-row align-items-center" >
                         <h6 id="food-quantity" class="m-3 bg-black" style="width: max-content;">{{$food->pivot->quantity}} порций</h6>
                     </div>
                 </td>
-                <td colspan="2" id="foodTotalSum">{{$total_sum}} сом</td>
+                <td colspan="2">
+                    <div class="d-flex flex-row align-items-center" >
+                        <h6 id="food-quantity" class="m-3 bg-black" style="width: max-content;">{{$food->pivot->quantity_complete}} порций</h6>
+                    </div>
+                </td>
+                <td colspan="1" id="foodTotalSum">{{$total_sum}} сом</td>
                 <td>
                     @if($food->pivot->is_completed == false)
                         <div class="btn btn-secondary fw-bold w-100">

@@ -77,19 +77,19 @@
                                     </div>
                                     <div class="d-flex">
                                         <div>
-                                        <input id="card-mount" maxlength="2"  type="text" value=""  name="card_mount" class="form-control " placeholder="00">
+                                        <input id="card-mount" maxlength="2"  type="tel" value=""  name="card_mount" class="form-control " placeholder="00">
                                         </div>
                                         <div>
                                         <i class="fa-solid fa-slash fa-rotate-270 m-2"></i>
                                         </div>
                                         <div>
-                                        <input id="card-year" maxlength="2" type="text" value="" name="card_year" class="form-control " placeholder="00">
+                                        <input id="card-year" maxlength="2" type="tel" value="" name="card_year" class="form-control " placeholder="00">
                                         </div>
                                     </div>
                                 </div>
                                 <div class=" d-flex flex-column align-items-center w-50">
                                     <h6>CCV</h6>
-                                    <input maxlength="3" id="card-ccv" type="text" value="" name="card_ccv" class="form-control ms-2" placeholder="123">
+                                    <input maxlength="3" id="card-ccv" type="tel" value="" name="card_ccv" class="form-control ms-2" placeholder="123">
                                 </div>
 
                             </div>
@@ -250,9 +250,10 @@
                 <td id="food-price-${products[key].id}" data-price="${products[key].price}">${products[key].price} сом</td>
                 <td>
                 <div class="d-flex flex-row align-items-center ">
+                   <button type="button" data-id="${products[key].id}" class="btn btn-secondary order-minus"><i class="fa-solid fa-minus"></i></button>
+                   <h6 id="food-quantity-${products[key].id}" class="m-3 bg-black">${products[key].quantity}</h6>
                     <button type="button"  data-id="${products[key].id}" class="btn btn-secondary order-plus"><i class="fa-solid fa-plus"></i></button>
-                    <h6 id="food-quantity-${products[key].id}" class="m-3 bg-black">${products[key].quantity}</h6>
-                    <button type="button" data-id="${products[key].id}" class="btn btn-secondary order-minus"><i class="fa-solid fa-minus"></i></button>
+
 </div>
 </td>
                 <td id="foodTotalSum-${products[key].id}">${totalSum(foodPrice, foodQuantity)} сом</td>

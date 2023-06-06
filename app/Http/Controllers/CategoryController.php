@@ -9,11 +9,7 @@ use Validator;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $paginate = 15; //Количество элементов отображаемых на одной странице
@@ -22,11 +18,6 @@ class CategoryController extends Controller
         return view('categories.index', compact('categories',  'paginate'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function sort(Request $request)
     {
 
@@ -45,12 +36,7 @@ class CategoryController extends Controller
         return response()->json(['view' => $view]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -75,12 +61,7 @@ class CategoryController extends Controller
             'image' => $image,
         ];
 
-         Category::create($new_category);
-
-
-
-
-
+        Category::create($new_category);
         $category = Category::latest()->take(1)->first();
 
         $records_number = Category::count();
@@ -108,36 +89,6 @@ class CategoryController extends Controller
         return response()->json(['record' => $record, 'record_id' => $records_number, 'success' => true]);
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Category $category)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request)
     {
 
@@ -192,12 +143,6 @@ class CategoryController extends Controller
         return  response()->json(['record' => $record, 'record_id'=> $records_number, 'success' => true]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Category $category)
     {
         $record_counts=  Category::where('id', '<=', $category->id)->count();

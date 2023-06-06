@@ -58,10 +58,9 @@ class MenuController extends Controller
         $foods = Food::where('name', 'LIKE', "%$search%")->get();
 
         $toppings = Topping::all();
-        $category = $request->input('category');
 
 
-        $view = view('menu.food_list', compact('foods', 'toppings', 'category'))->render();
+        $view = view('menu.search_result', compact('foods', 'toppings'))->render();
         return response()->json(['view' => $view]);
     }
 

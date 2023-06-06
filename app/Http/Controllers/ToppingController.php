@@ -10,25 +10,16 @@ use Spatie\Permission\Models\Permission;
 
 class ToppingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $paginate = 10; //Количество элементов отображаемых на одной странице
+        $paginate = 30; //Количество элементов отображаемых на одной странице
         $toppings = Topping::paginate($paginate); //Пагинация
         $units = Unit::all(); //Единицы измерения
 
         return view('toppings.index', compact('toppings', 'units', 'paginate'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function sort(Request $request)
     {
 
@@ -47,12 +38,6 @@ class ToppingController extends Controller
         return response()->json(['view' => $view]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -93,36 +78,6 @@ class ToppingController extends Controller
         return response()->json(['record' => $record, 'record_id' => $records_number, 'success' => true]);
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Topping  $topping
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Topping $topping)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Topping  $topping
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Topping $topping)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Topping  $topping
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -160,12 +115,6 @@ class ToppingController extends Controller
         return  response()->json(['record' => $record, 'record_id'=> $records_number, 'success' => true]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Topping  $topping
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Topping $topping)
     {
         $record_counts=  Topping::where('id', '<=', $topping->id)->count();

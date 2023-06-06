@@ -81,9 +81,9 @@
                         @endif
                     </div>
                     @if($food->topping->count() != 0)
-                <div class="flex-column w-75">
+                <div class="flex-column w-75 mb-5">
                     <h4 class="text-center">Ингридиенты</h4>
-                    <div style="max-height: 100px" class="d-flex flex-row  flex-wrap">
+                    <div style="max-height: 100px" class="d-flex flex-row flex-wrap mb-5">
                     @foreach($food->topping as $topping)
                         @php
                             $quantity = $topping->pivot->quantity;

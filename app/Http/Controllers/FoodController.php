@@ -8,15 +8,9 @@ use App\Models\Topping;
 use App\Services\ImageUploader;
 use Illuminate\Http\Request;
 use Validator;
-use function GuzzleHttp\Promise\all;
 
 class FoodController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $paginate = 10; //Количество элементов отображаемых на одной странице
@@ -27,12 +21,6 @@ class FoodController extends Controller
         return view('food.index', compact('foods', 'toppings', 'categories',  'paginate'));
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function sort(Request $request)
     {
 
@@ -54,13 +42,6 @@ class FoodController extends Controller
         return response()->json(['view' => $view]);
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -127,36 +108,6 @@ class FoodController extends Controller
         return response()->json(['record_id' => $records_number, 'success' => true]);
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Food $food)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Food $food)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request)
     {
 
@@ -218,12 +169,7 @@ class FoodController extends Controller
 
         return response()->json(['record_id' => $records_number, 'success' => true]);
     }
-        /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Food  $food
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Food $food)
     {
         $record_counts=  Food::where('id', '<=', $food->id)->count();

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="deleteModalLabel">Подтвердите заказ</h5>
@@ -146,11 +146,11 @@
                     $('#search').keyup(function () {
                         $('#food-items').addClass('d-none')
                         $('#preloader').removeClass('d-none');
-                    setTimeout(function() {
+
                             var search_input = $('#search').val()
 
                             search(search_input)
-                        },1500)
+
                     })
                 })
 

@@ -3,7 +3,7 @@
 
     <tr class="table-container" id="record-{{$hall->id}}">
         <td class="text-center">{{ $records_number }} </td>
-        <td>{{ $hall->name }} зал</td>
+        <td><b>{{ $hall->name }}</b> зал</td>
         <td><b>{{ $hall->number_of_tables}}</b> столиков</td>
         <td>{{ $hall->created_at }}</td>
         @if (auth()->user()->can('manage records'))

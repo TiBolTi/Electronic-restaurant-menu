@@ -17,7 +17,7 @@ class CreateFoodTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->float('price')->default(0);
+            $table->integer('price')->default(0);
             $table->string('image');
             $table->boolean('is_special');
             $table->boolean('is_vegan');

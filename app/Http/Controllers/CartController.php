@@ -35,15 +35,15 @@ class CartController extends Controller
             'payment_sum' => 'integer',
         ]);
 
+
+
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()]);
         }
 
         $user_id = auth()->id();
         $items[0]['user_id'] = $user_id;
-        $items[0]['is_completed'] = false;
         $items[0]['order_status'] = 'В ожидании';
-
 
 
         if ($request->input('tips') === null) {

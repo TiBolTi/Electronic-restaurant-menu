@@ -73,6 +73,7 @@
             <td colspan="12" id="create-form" class="d-none">
                 <form action="" id="form" method="POST" class="row g-3 d-flex justify-content-center align-items-center">
                     @csrf
+
                     <div class="col-auto w-50 ">
                         <input id="input-name" type="text" name="name" class="form-control" placeholder="Введите название ингредиента">
                     </div>
