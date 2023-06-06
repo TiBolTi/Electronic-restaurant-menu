@@ -17,5 +17,7 @@
         <li>Ajax</li>
     </ul>  
     
-<h2>Ссылка на оналайн версию проекта</h2>
+<h3>Ссылка на онлайн версию проекта</h3>
    <a href="http://www.nikita.php-f22.ru" target="_blank">http://www.nikita.php-f22.ru</a> 
+   
+<h2>Инструкция по устаноке</h2>
