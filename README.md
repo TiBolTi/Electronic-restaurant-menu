@@ -1,4 +1,4 @@
-<h1 align="center"><a href="http://www.nikita.php-f22.ru" target="_blank">Electronic Restaurant Menu</h1>
+<h1 align="center"><a href="http://www.nikita.php-f22.ru" target="_blank">Electronic Restaurant Menu</a></h1>
 
 <h2>О проекте</h2>
     <p>Посещение ресторанов и кафе стало частью нашей жизни. И внедрение технологий является неотъемлемой процессом для процветания бизнеса. Так вот, процесс заказа еды может быть очень долгим и неудобным. Меню объемное и запутанным, официанты заняты, и приходится ждать, пока они освободятся, чтобы сделать заказ. Это довольно неудобно, и было бы здорово иметь приложение, которое позволило бы мне заказывать еду онлайн используя приложение  сайт этого ресторана, где клиент знает из чего состоит блюдо, могу выбрать подходящий для меня режим питания.
@@ -11,8 +11,11 @@
     <ul>
         <li>PHP</li>
         <li>Laravel</li>
+        <li>FontAwesome</li>
         <li>Bootstrap</li>
         <li>Jqery</li>
-        <li>FontAwesome</li>
         <li>Ajax</li>
-    </ul>    
+    </ul>  
+    
+<h2>Ссылка на оналайн версию проекта</h2>
+   <a href="http://www.nikita.php-f22.ru" target="_blank">Electronic Restaurant Menu</a> 
