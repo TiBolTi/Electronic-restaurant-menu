@@ -25,3 +25,12 @@
    Пароль: 1234567890</p>
    
 <h2>Инструкция по устаноке</h2>
+ 
+    <ul>
+        <li></li>
+        <li>Laravel</li>
+        <li>FontAwesome</li>
+        <li>Bootstrap</li>
+        <li>Jqery</li>
+        <li>Ajax</li>
+    </ul> 
