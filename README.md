@@ -1,64 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1 align="center"><a href="http://www.nikita.php-f22.ru" target="_blank">Electronic Restaurant Menu</a></h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h2>О проекте</h2>
+Посещение ресторанов и кафе стало частью нашей жизни. И внедрение технологий является неотъемлемой процессом для процветания бизнеса. Так вот, процесс заказа еды может быть очень долгим и неудобным. Меню объемное и запутанным, официанты заняты, и приходится ждать, пока они освободятся, чтобы сделать заказ. Это довольно неудобно, и было бы здорово иметь приложение, которое позволило бы мне заказывать еду онлайн используя приложение  сайт этого ресторана, где клиент знает из чего состоит блюдо, могу выбрать подходящий для меня режим питания.
+Такое приложение будет полезным не только для меня, но и для других людей, которые хотят заказать еду.
 
-## About Laravel
+<h2>Цель проекта</h2>
+Создать удобную онлайн-платформу для клиентов ресторана, которые хотят заказать еду в ресторане. Наше приложение будет предоставлять доступ к меню ресторана, а также позволит пользователям заказать и оплатить еду онлайн без необходимости звонить и делать заказ по телефону.
+    
+<h2>Стек технологий</h2>  
+    <ul>
+        <li>PHP</li>
+        <li>Laravel</li>
+        <li>FontAwesome</li>
+        <li>Bootstrap</li>
+        <li>Jqery</li>
+        <li>Ajax</li>
+    </ul>  
+    
+<h3>Ссылка на онлайн версию проекта</h3>
+ http://www.nikita.php-f22.ru
+   
+   <h4>Логин и пароль от админ аккаунта</h4>
+   
+    Логин: Admin@mail.ru
+    Пароль: 1234567890
+   
+<h2>Инструкция по устаноке</h2>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1) Установите Git (если у вас его еще нет) на вашем компьютере. Вы можете скачать его с официального сайта Git: https://git-scm.com/downloads
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2) Откройте командную строку или терминал на вашем компьютере.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3) Перейдите в каталог, в котором вы хотите разместить проект. Например, если вы хотите создать проект в папке "Projects", выполните следующую команду:
 
-## Learning Laravel
+        cd Projects
+    
+4) Склонируйте репозиторий с GitHub. Для этого выполните команду git clone с указанием URL репозитория. Например:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+            
+        git clone https://github.com/TiBolTi/Electronic-restaurant-menu.git
+    
+5) Перейдите в каталог склонированного проекта:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+        cd repository
 
-## Laravel Sponsors
+6) Установите зависимости проекта, выполнив команду:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+        composer install
+    
+Для выполнения этой команды требуется, чтобы у вас был установлен Composer (установщик пакетов для PHP). Если у вас его еще нет, вы можете скачать его с официального сайта Composer: https://getcomposer.org/download/
 
-### Premium Partners
+7) Создайте копию файла .env.example и назовите ее .env. Этот файл содержит настройки окружения для вашего проекта. Выполните команду:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+        cp .env.example .env
+    
+8) Сгенерируйте ключ приложения Laravel, выполнив команду:
 
-## Contributing
+        php artisan key:generate
+    
+Эта команда сгенерирует уникальный ключ приложения, который используется для шифрования данных.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+9) Установите соединение с базой данных. Откройте файл .env в текстовом редакторе и укажите настройки подключения к вашей базе данных 
 
-## Code of Conduct
+        DB_DATABASE=laravel --Имя базы данных
+        DB_USERNAME=root --Пользователь быза данных
+        DB_PASSWORD= --Пароль быза данных (по стандарту отсутсвует) 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+10) Выполните миграции базы данных, чтобы создать необходимые таблицы, выполнив команду:
 
-## Security Vulnerabilities
+        php artisan migrate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Эта команда создаст таблицы, определенные в миграциях Laravel.
 
-## License
+11) Создайте символьную ссылку для папки Storage
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+        php artisan storage:link
+
+12) Заполните базу данных заранее подготовленными данными.
+
+        php artisan db:seed
+    
+Данная команда загрузит в базу неоходимые данные для работы, а также создаст аккаунт админимтратораю
+  <h4>Логин и пароль от админ аккаунта</h4>
+  
+        Логин: Admin@mail.ru
+        Пароль: 1234567890
+
+13) После завершения установки запустите веб-сервер Laravel, выполнив команду:
+
+        php artisan serve
+    
+Эта команда запустит локальный веб-сервер, и вы сможете открыть ваш проект в браузере по адресу http://localhost:8000.
+
+После всех этих действий проект будет установен и запущен у вас на компьютере.
+Хочу также напомнить что вы можете также воспользоваться онлайн версией проекта, которая уже залита на хостинг и находится в общем доступе.
+
+Перейти на неё вы можете по этой ссылке: http://www.nikita.php-f22.ru 
+
