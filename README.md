@@ -18,4 +18,4 @@
     </ul>  
     
 <h2>Ссылка на оналайн версию проекта</h2>
-   <a href="http://www.nikita.php-f22.ru" target="_blank">Electronic Restaurant Menu</a> 
+   <a href="http://www.nikita.php-f22.ru" target="_blank">http://www.nikita.php-f22.ru</a> 
