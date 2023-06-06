@@ -21,7 +21,7 @@
    <a href="http://www.nikita.php-f22.ru" target="_blank">http://www.nikita.php-f22.ru</a> 
    
    <h4>Логин и пароль от админ аккаунта</h4>
-   <p>Логин: Admin@mail.ru</p>
-   <p>Пароль: 1234567890</p>
+   <p>Логин: Admin@mail.ru<br>
+   Пароль: 1234567890</p>
    
 <h2>Инструкция по устаноке</h2>
