@@ -38,7 +38,7 @@
 4) Склонируйте репозиторий с GitHub. Для этого выполните команду git clone с указанием URL репозитория. Например:
 
             
-        git clone https://github.com/username/repository.git
+        git clone https://github.com/TiBolTi/Electronic-restaurant-menu.git
     
 5) Перейдите в каталог склонированного проекта:
 
